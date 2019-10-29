@@ -1,0 +1,16 @@
+{
+  "name": "conference-hall-excel-converter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "excelConverter.js",
+  "scripts": {
+    "start": "node excelConverter.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "excel4node": "^1.7.2"
+  }
+}
