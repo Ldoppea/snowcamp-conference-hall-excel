@@ -5,6 +5,7 @@ A helper project allowing to export ConferenceHall submissions to excel
 ## Getting Started
 
 Retrieve your event ID in the event url : `https://conference-hall.io/public/event/<eventID>/`
+
 Retrieve your API key from your ConferenceHall event : `https://conference-hall.io/organizer/event/<eventID>/edit/integrations`
 
 In the Proposal view, click on the `Export...` button and choose `JSON File`. Copy the downloaded file in the project folder
@@ -19,7 +20,7 @@ yarn
 yarn start
 ```
 
-The script should have generated a file named `ConferenceHall.xlsx`.
+The script should have generated a file named `ConferenceHall.xlsx`
 
 ## Built With
 
