@@ -29,6 +29,7 @@ const getTalkSpeaker = (privateEvent, publicEvent, talk) => {
       return {
         name: speaker.displayName,
         email: speaker.email,
+        company: speaker.company || '',
         location: country,
         otherTalks: publicEvent.talks
           .filter(otherTalk => otherTalk.speakers.includes(speaker.uid) && otherTalk.title != talk.title)

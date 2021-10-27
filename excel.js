@@ -76,6 +76,7 @@ const fillSheet = (workbook, worksheetName, talks) => {
   for (let i = 0; i < maxSpeakerCount; i++) {
     setColumn(sheet, headerColumn++, `Speaker ${i + 1} name`, 30, speakersBackground[i%3])
     setColumn(sheet, headerColumn++, `Speaker ${i + 1} email`, 35, speakersBackground[i%3])
+    setColumn(sheet, headerColumn++, `Speaker ${i + 1} company`, 20, speakersBackground[i%3])
     setColumn(sheet, headerColumn++, `Speaker ${i + 1} location`, 20, speakersBackground[i%3])
     setColumn(sheet, headerColumn++, `Speaker ${i + 1} othertalks`, 111, speakersBackground[i%3])
   }
@@ -100,6 +101,7 @@ const fillSheet = (workbook, worksheetName, talks) => {
     talk.speakers.forEach(speaker => {
       sheet.cell(line, column++).string(speaker.name)
       sheet.cell(line, column++).link(`mailto:${speaker.email}`, speaker.email)
+      sheet.cell(line, column++).string(speaker.company)
       sheet.cell(line, column++).string(speaker.location)
       let othertalks = speaker.otherTalks.map(otherTalk => `-${otherTalk.title}`).join('\n')
       sheet.cell(line, column++).string(othertalks).style(styleOtherTalks)
